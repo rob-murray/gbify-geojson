@@ -1,0 +1,23 @@
+{
+  "name": "gbify-geojson",
+  "version": "0.1.0",
+  "description": "reproject geojson to from osbg36",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "keywords": [
+    "geojson",
+    "osgb36",
+    "ordnancesurvey"
+  ],
+  "author": "mr",
+  "license": "MIT",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "proj4": "^2.3.6"
+  }
+}
