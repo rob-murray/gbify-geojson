@@ -61,7 +61,7 @@ In using this project, please note the following points - these may be fixed in 
 
 You can get hold of the code with npm and it should work fine with [browserify](http://browserify.org/). Or you can just manually import the source.
 
-### Dependency management
+#### Dependency management
 
 With npm:
 
@@ -69,7 +69,7 @@ With npm:
 $ npm install gbify-geojson
 ```
 
-### Interface
+## Interface
 
 Given the library is loaded
 
@@ -102,7 +102,7 @@ Reproject the `geoJson` object to [EPSG:4326](http://spatialreference.org/ref/ep
 ```
 
 
-### Development
+## Development
 
 #### Run tests
 
