@@ -25,8 +25,8 @@ An example GeoJSON reprojected;
   "geometry": {
     "type": "Point",
     "coordinates": [
-      -0.133700,
-      51.509980
+      -0.1371467113494873,
+      51.511566985991124
     ]
   }
 }
@@ -40,8 +40,8 @@ An example GeoJSON reprojected;
   "geometry": {
     "type": "Point",
     "coordinates": [
-      529612.0017137363,
-      180656.541822027
+      529368.337631789,
+      180826.92697173066
     ]
   }
 }
@@ -81,13 +81,13 @@ Given the library is loaded
 Reproject the `geoJson` object to [EPSG:27700](http://spatialreference.org/ref/epsg/27700/).
 
 ```node
-> var point = {"type":"Feature","properties":{"popupContent":"Golden Square, Soho, London."},"geometry":{"type":"Point","coordinates":[-0.133700,51.509980]}}
+> var point = {"type":"Feature","properties":{"popupContent":"Golden Square, Soho, London."},"geometry":{"type":"Point","coordinates":[-0.1371467113494873, 51.511566985991124]}}
 > gbify.toOSGB36(point)
 { type: 'Feature',
   properties: { popupContent: 'Golden Square, Soho, London.' },
   geometry:
    { type: 'Point',
-     coordinates: [ 529612.0017137363, 180656.541822027 ] } }
+     coordinates: [ 529368.337631789, 180826.92697173066 ] } }
 ```
 
 #### toWGS84(geoJson)
