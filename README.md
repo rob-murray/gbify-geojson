@@ -1,6 +1,7 @@
 # gbify-geojson
 
 [![Build Status](https://travis-ci.org/rob-murray/gbify-geojson.svg)](https://travis-ci.org/rob-murray/gbify-geojson)
+[![npm version](https://badge.fury.io/js/gbify-geojson.svg)](http://badge.fury.io/js/gbify-geojson)
 
 Reproject GeoJSON between OSGB36 GB National Grid and WGS84 CRSs.
 
