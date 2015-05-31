@@ -33,13 +33,13 @@ An example GeoJSON reprojected;
 
 // OSGB36
 {
-  type: 'Feature',
-  properties: {
-    popupContent: 'Golden Square, Soho, London.'
+  "type": "Feature",
+  "properties": {
+    "popupContent": "Golden Square, Soho, London."
   },
-  geometry: {
-    type: 'Point',
-    coordinates: [
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
       529612.0017137363,
       180656.541822027
     ]
