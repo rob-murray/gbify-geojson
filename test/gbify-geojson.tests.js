@@ -128,3 +128,15 @@ describe('toWGS84', function () {
     });
   });
 });
+
+describe('crs property', function () {
+  it('removes the crs property when present', function() {
+    var transformed = gbgeojsonify.toOSGB36(FIXTURES.featureCollectionWithCrs);
+    expect(transformed).to.not.have.key('crs');
+  });
+
+  it('does not add crs property', function() {
+    var transformed = gbgeojsonify.toWGS84(FIXTURES.featureCollection.OSGB36);
+    expect(transformed).to.not.have.key('crs');
+  });
+});

@@ -49,6 +49,12 @@
   function traverseGeoJson(geoJson, processLeafNode) {
     var reprojected = clone(geoJson);
 
+    // Whilst the crs prop is in the GeoJson spec its a bit of a hassle to work out
+    // what format the ref sys is in so play safe and just remove it if present.
+    if (reprojected.crs) {
+      delete reprojected.crs;
+    }
+
     if (geoJson.type === 'Feature') {
       //console.log([JSON.stringify(geoJson), 'is a Feature']);
       reprojected.geometry = traverseGeoJson(geoJson.geometry, processLeafNode);

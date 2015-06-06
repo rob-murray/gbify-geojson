@@ -93,10 +93,35 @@ var featureCollection = {
   }
 };
 
+var featureCollectionWithCrs = {
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "hello": "world"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.47019386, 50.9367169
+        ]
+      }
+    }
+  ]
+}
+
 module.exports = {
   point: point,
   lineString: lineString,
   featureCollection: featureCollection,
+  featureCollectionWithCrs: featureCollectionWithCrs,
   emptyFeatureCollection: {
     "type": "FeatureCollection",
     "features": []

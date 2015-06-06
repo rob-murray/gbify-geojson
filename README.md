@@ -52,7 +52,7 @@ An example GeoJSON reprojected;
 
 In using this project, please note the following points - these may be fixed in future versions.
 
-* We ignore the `CRS` property specified by [GeoJSON spec](http://geojson.org/geojson-spec.html#coordinate-reference-system-objects). This has no impact on tranformation.
+* We ignore the `CRS` property specified by [GeoJSON spec](http://geojson.org/geojson-spec.html#coordinate-reference-system-objects). This has no impact on tranformation and is removed if present.
 * The level of precision output is not representative of the accuracy of the tranformation. i.e. Lots of decimal places does not mean the tranformation is accurate to that precision.
 * A bounding box member is reprojected, this probably is not correct.
 
