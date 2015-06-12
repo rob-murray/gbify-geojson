@@ -57,6 +57,11 @@ In using this project, please note the following points - these may be fixed in 
 * A bounding box member is reprojected, this probably is not correct.
 
 
+### Web example
+
+This library is used by [gb-geojson](https://github.com/rob-murray/gb-geojson) project that allows you to view, create, edit, transform GeoJSON map data in British National Grid reference system and WGS84. The app reprojects between each CRS when updated, you can try it out [http://rob-murray.github.io/gb-geojson/](http://rob-murray.github.io/gb-geojson/).
+
+
 ## Getting started
 
 You can get hold of the code with npm and it should work fine with [browserify](http://browserify.org/). Or you can just manually import the source.
