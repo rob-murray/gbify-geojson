@@ -33,7 +33,7 @@
   function isValidCoord(coord) {
     return coord && coord.length === 2 &&
       typeof coord[0] === 'number' &&
-      typeof coord[1] === 'number';
+        typeof coord[1] === 'number';
   }
 
   function traverseCoords(coordinates, callback) {
@@ -72,23 +72,25 @@
     return reprojected;
   }
 
-  function traverseAndReproject(geoJson, from, to) {
+  function traverseAndReproject(geoJson, from, to, precision) {
     var reproject = proj4(from, to);
 
     return traverseGeoJson(geoJson, function(leafNode) {
       //console.log(['leafNode callback on', JSON.stringify(leafNode)])
       leafNode.coordinates = traverseCoords(leafNode.coordinates, function(coords) {
-        return reproject.forward(coords);
+        return reproject.forward(coords).map(function(p) {
+          return 1 * p.toFixed(precision);
+        });
       });
     });
   }
 
   return {
     toOSGB36: function(geoJson) {
-      return traverseAndReproject(geoJson, proj4.WGS84, osgb36);
+      return traverseAndReproject(geoJson, proj4.WGS84, osgb36, 2);
     },
     toWGS84: function(geoJson) {
-      return traverseAndReproject(geoJson, osgb36, proj4.WGS84);
+      return traverseAndReproject(geoJson, osgb36, proj4.WGS84, 6);
     }
   };
 }));

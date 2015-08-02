@@ -6,7 +6,7 @@ var expect = require('expect.js'),
 function isValidCoord(coord) {
   return coord && coord.length === 2 &&
     typeof coord[0] === 'number' &&
-    typeof coord[1] === 'number';
+      typeof coord[1] === 'number';
 }
 
 function closeEnough(actualCoords, expectedCoords, precision) {
@@ -40,7 +40,7 @@ describe('toOSGB36', function () {
     it('transforms Point', function() {
       var transformed = gbgeojsonify.toOSGB36(FIXTURES.point.WGS84);
       expect(
-        closeEnough(transformed.coordinates, FIXTURES.point.OSGB36.coordinates, 0.1)
+        closeEnough(transformed.coordinates, FIXTURES.point.OSGB36.coordinates, 0.02)
       ).to.be(true);
     });
 
@@ -48,7 +48,7 @@ describe('toOSGB36', function () {
       var transformed = gbgeojsonify.toOSGB36(FIXTURES.lineString.WGS84);
       for (var i = 0; i < transformed.geometry.coordinates.length; i++) {
         expect(
-          closeEnough(transformed.geometry.coordinates[i], FIXTURES.lineString.OSGB36.geometry.coordinates[i], 0.1)
+          closeEnough(transformed.geometry.coordinates[i], FIXTURES.lineString.OSGB36.geometry.coordinates[i], 0.02)
         ).to.be(true);
       }
     });
@@ -64,7 +64,7 @@ describe('toOSGB36', function () {
       var transformed = gbgeojsonify.toOSGB36(FIXTURES.featureCollection.WGS84);
       for (var i = 0; i < transformed.features.length; i++) {
         validateFeature(
-          transformed.features[i], FIXTURES.featureCollection.OSGB36.features[i], 0.1
+          transformed.features[i], FIXTURES.featureCollection.OSGB36.features[i], 0.02
         );
       }
     });
@@ -96,7 +96,7 @@ describe('toWGS84', function () {
       var transformed = gbgeojsonify.toWGS84(FIXTURES.lineString.OSGB36);
       for (var i = 0; i < transformed.geometry.coordinates.length; i++) {
         expect(
-          closeEnough(transformed.geometry.coordinates[i], FIXTURES.lineString.WGS84.geometry.coordinates[i], 0.1)
+          closeEnough(transformed.geometry.coordinates[i], FIXTURES.lineString.WGS84.geometry.coordinates[i], 1e-6)
         ).to.be(true);
       }
     });
