@@ -41,8 +41,8 @@ An example GeoJSON reprojected;
   "geometry": {
     "type": "Point",
     "coordinates": [
-      529368.337631789,
-      180826.92697173066
+      529368.34,
+      180826.93
     ]
   }
 }
@@ -53,7 +53,6 @@ An example GeoJSON reprojected;
 In using this project, please note the following points - these may be fixed in future versions.
 
 * We ignore the `CRS` property specified by [GeoJSON spec](http://geojson.org/geojson-spec.html#coordinate-reference-system-objects). This has no impact on tranformation and is removed if present.
-* The level of precision output is not representative of the accuracy of the tranformation. i.e. Lots of decimal places does not mean the tranformation is accurate to that precision.
 * A bounding box member is reprojected, this probably is not correct.
 
 
@@ -93,7 +92,7 @@ Reproject the `geoJson` object to [EPSG:27700](http://spatialreference.org/ref/e
   properties: { popupContent: 'Golden Square, Soho, London.' },
   geometry:
    { type: 'Point',
-     coordinates: [ 529368.337631789, 180826.92697173066 ] } }
+     coordinates: [ 529368.34, 180826.93 ] } }
 ```
 
 #### toWGS84(geoJson)
@@ -103,7 +102,7 @@ Reproject the `geoJson` object to [EPSG:4326](http://spatialreference.org/ref/ep
 ```node
 > var poly = {"type":"Feature","properties":{"popupContent":"I am SU43."},"geometry":{"type":"Polygon","coordinates":[[[440000,130000],[450000,130000],[450000,140000],[440000,140000],[440000,130000]]]}}
 > gbify.toWGS84(poly) // JSON.stringify(gbify.toWGS84(poly))
-'{"type":"Feature","properties":{"popupContent":"I am SU43."},"geometry":{"type":"Polygon","coordinates":[[[-1.4305097083899097,51.06794490479421],[-1.2878036038975291,51.067162887915856],[-1.2864206792707007,51.1570765579341],[-1.4294039490090389,51.15786107431645],[-1.4305097083899097,51.06794490479421]]]}}'
+'{"type":"Feature","properties":{"popupContent":"I am SU43."},"geometry":{"type":"Polygon","coordinates":[[[-1.43051,51.067945],[-1.287804,51.067163],[-1.286421,51.157077],[-1.429404,51.157861],[-1.43051,51.067945]]]}}'
 ```
 
 
