@@ -21,6 +21,27 @@ var point = {
   }
 };
 
+var pointWithElevation = {
+  OSGB36: {
+    "type": "Point",
+    "properties": {
+      "hello": "world"
+    },
+    "coordinates": [
+      437324.22, 115385.91, 150
+    ]
+  },
+  WGS84: {
+    "type": "Point",
+    "properties": {
+      "hello": "world"
+    },
+    "coordinates": [
+      -1.47019386, 50.9367169, 150
+    ]
+  }
+};
+
 var lineString = {
   OSGB36: {
     "type": "Feature",
@@ -119,6 +140,7 @@ var featureCollectionWithCrs = {
 
 module.exports = {
   point: point,
+  pointWithElevation: pointWithElevation,
   lineString: lineString,
   featureCollection: featureCollection,
   featureCollectionWithCrs: featureCollectionWithCrs,

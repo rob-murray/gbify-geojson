@@ -30,8 +30,11 @@
     return temp;
   }
 
+  /*
+   * Check coords in form of [x, y] or [x, y, z]
+   */
   function isValidCoord(coord) {
-    return coord && coord.length === 2 &&
+    return coord && coord.length >= 2 &&
       typeof coord[0] === 'number' &&
         typeof coord[1] === 'number';
   }

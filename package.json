@@ -1,6 +1,6 @@
 {
   "name": "gbify-geojson",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Reproject GeoJSON between OSGB36 GB National Grid and WGS84",
   "main": "index.js",
   "scripts": {
