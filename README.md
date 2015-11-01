@@ -10,7 +10,7 @@ Reproject GeoJSON between OSGB36 GB National Grid and WGS84 CRSs.
 
 The default reference system used by GeoJSON to describe the geospatial data contained is usually `ESPG:4326`, cartesian coordinates are referenced using the WGS84 datum.
 
-With this project we can reproject to or from the coordinate reference system WGS84 and the projected local coordinate system OSGB36, [EPSG:27700](http://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/), British National Grid. The library will reproject all coordinate data in a GeoJSON object to / from these reference systems.
+With this library we can reproject to or from the coordinate reference system WGS84 and the projected local coordinate system OSGB36, [EPSG:27700](http://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/), British National Grid. The library will reproject all coordinate data in a GeoJSON object to / from these reference systems.
 
 This library uses `proj4js` to do the tranformation.
 
